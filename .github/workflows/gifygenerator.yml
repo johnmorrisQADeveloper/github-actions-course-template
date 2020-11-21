@@ -3,4 +3,16 @@ name: Gify generator
 on: 
   issues:
     types: [opened, edited]
+  pull_request:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
     
+jobs:
+  gify-generator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ruairidhwm/action-cats@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       
