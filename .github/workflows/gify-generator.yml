@@ -1,6 +1,0 @@
-name: Gify generator
-
-on: 
-  issues:
-    types: [opened, edited]
-    
